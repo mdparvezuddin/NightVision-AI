@@ -1,0 +1,11 @@
+{
+    "model": "yolo26n.pt",
+    "device": "CPU",
+    "confidence_threshold": 0.25,
+    "image_size": 640,
+    "images_processed": 2563,
+    "total_predictions": 6279,
+    "images_with_predictions": 2356,
+    "images_without_predictions": 207,
+    "inference_seconds": 207.95
+}

@@ -1,0 +1,35 @@
+﻿# Dataset and original images
+dataset/
+backup_classmap_fix/
+
+# Backups and local environments
+integration_backup/
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Exclude all research outputs by default
+exdark_audit_output/*
+
+# Include paired enhancement dashboard inputs
+!exdark_audit_output/paired_enhancement_validation/
+exdark_audit_output/paired_enhancement_validation/*
+!exdark_audit_output/paired_enhancement_validation/experiment_summary.json
+!exdark_audit_output/paired_enhancement_validation/paired_bootstrap_confidence_intervals.csv
+
+# Include full-test dashboard inputs
+!exdark_audit_output/zero_shot_full_test/
+exdark_audit_output/zero_shot_full_test/*
+!exdark_audit_output/zero_shot_full_test/full_test_summary.json
+!exdark_audit_output/zero_shot_full_test/full_test_evaluation_summary.json
+!exdark_audit_output/zero_shot_full_test/metrics_by_class.csv
+!exdark_audit_output/zero_shot_full_test/metrics_by_lighting.csv
+
+# Local Streamlit files
+.streamlit/secrets.toml
+
+# Temporary files
+*.log
+*.tmp
+.DS_Store

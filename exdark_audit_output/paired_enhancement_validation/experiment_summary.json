@@ -1,0 +1,59 @@
+{
+    "model": "yolo26n.pt",
+    "device": "CPU",
+    "confidence_threshold": 0.25,
+    "image_size": 640,
+    "iou_threshold": 0.5,
+    "images": 1799,
+    "enhancements": {
+        "clahe_clip_limit": 2.0,
+        "clahe_tile_grid": [
+            8,
+            8
+        ],
+        "gamma": 0.7
+    },
+    "variants": {
+        "original": {
+            "TP": 3434,
+            "FP": 2818,
+            "FN": 2777,
+            "precision": 0.5492642354446577,
+            "recall": 0.5528900338109806,
+            "f1": 0.551071170665169
+        },
+        "clahe": {
+            "TP": 3461,
+            "FP": 2920,
+            "FN": 2750,
+            "precision": 0.5423914746904874,
+            "recall": 0.5572371598776364,
+            "f1": 0.5497141041931385
+        },
+        "gamma": {
+            "TP": 3444,
+            "FP": 2985,
+            "FN": 2767,
+            "precision": 0.5356976201586561,
+            "recall": 0.5545000805023346,
+            "f1": 0.5449367088607594
+        }
+    },
+    "paired_comparison": {
+        "clahe": {
+            "images_improved": 147,
+            "images_unchanged": 1517,
+            "images_damaged": 135,
+            "mean_miss_rate_change": -0.0009903570788212695,
+            "total_FN_change": -27
+        },
+        "gamma": {
+            "images_improved": 148,
+            "images_unchanged": 1513,
+            "images_damaged": 138,
+            "mean_miss_rate_change": 0.0023000185527313737,
+            "total_FN_change": -10
+        }
+    },
+    "inference_seconds": 287.02
+}
